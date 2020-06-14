@@ -1,0 +1,32 @@
+$theme: 1;
+
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-toggler {
+  padding: 0px;
+  font-size: xx-large;
+  color: #b4b8ce;
+}
+
+.main-header > .navbar {
+  @if $theme == 1 {
+    background-color: #fff;
+  } @else {
+    color: gray;
+    background-color: #0a0a0a;
+  }
+
+  border-bottom: 1px solid #eff0f6;
+  box-shadow: 0 0 40px 0 rgba(82, 63, 105, 0.1);
+}
+
+#navbarheaderMenus {
+  border-top: 1px solid #ebedf2;
+}
+
+
+.organization-logo {
+  width: 25px;
+}

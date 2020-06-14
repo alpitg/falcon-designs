@@ -1,6 +1,137 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "falcon-designs": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/falcon-designs",
+      "sourceRoot": "projects/falcon-designs/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/falcon-designs",
+            "index": "projects/falcon-designs/src/index.html",
+            "main": "projects/falcon-designs/src/main.ts",
+            "polyfills": "projects/falcon-designs/src/polyfills.ts",
+            "tsConfig": "projects/falcon-designs/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/falcon-designs/src/favicon.ico",
+              "projects/falcon-designs/src/assets",
+              "projects/falcon-designs/src/config"
+            ],
+            "styles": [
+              "projects/falcon-designs/src/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/falcon-designs/src/assets/styles/components"
+              ]
+            },
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/falcon-designs/src/environments/environment.ts",
+                  "with": "projects/falcon-designs/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "falcon-designs:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "falcon-designs:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "falcon-designs:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/falcon-designs/src/test.ts",
+            "polyfills": "projects/falcon-designs/src/polyfills.ts",
+            "tsConfig": "projects/falcon-designs/tsconfig.spec.json",
+            "karmaConfig": "projects/falcon-designs/karma.conf.js",
+            "assets": [
+              "projects/falcon-designs/src/favicon.ico",
+              "projects/falcon-designs/src/assets"
+            ],
+            "styles": [
+              "projects/falcon-designs/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/falcon-designs/tsconfig.app.json",
+              "projects/falcon-designs/tsconfig.spec.json",
+              "projects/falcon-designs/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/falcon-designs/e2e/protractor.conf.js",
+            "devServerTarget": "falcon-designs:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "falcon-designs:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": false
+  },
+  "defaultProject": "falcon-designs"
 }
