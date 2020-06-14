@@ -5,6 +5,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { CardComponent } from './components/card/card.component';
 import { CardHeaderComponent } from './components/card-header/card-header.component';
 import { CardBodyComponent } from './components/card-body/card-body.component';
+import { FButtonDirective } from './directives/button/f-button.directive';
 
 
 
@@ -14,7 +15,8 @@ import { CardBodyComponent } from './components/card-body/card-body.component';
     SpinnerComponent,
     CardComponent,
     CardHeaderComponent,
-    CardBodyComponent
+    CardBodyComponent,
+    FButtonDirective
   ],
   imports: [
     CommonModule
@@ -23,7 +25,10 @@ import { CardBodyComponent } from './components/card-body/card-body.component';
     SpinnerComponent,
     CardComponent,
     CardHeaderComponent,
-    CardBodyComponent
+    CardBodyComponent,
+
+    // Directives
+    FButtonDirective
   ]
 })
 export class SharedModule { }

@@ -33,7 +33,8 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "projects/falcon-designs/src/assets/styles/components"
+                "projects/falcon-designs/src/assets/styles/components",
+                "projects/falcon-designs/src/assets/styles/pages"
               ]
             },
             "scripts": []

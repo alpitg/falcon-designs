@@ -1,5 +1,7 @@
+// Global variables
 $theme: 1;
 
+// Styling section
 .navbar-light .navbar-toggler {
   border-color: rgba(0, 0, 0, 0);
 }
@@ -21,11 +23,6 @@ $theme: 1;
   border-bottom: 1px solid #eff0f6;
   box-shadow: 0 0 40px 0 rgba(82, 63, 105, 0.1);
 }
-
-#navbarheaderMenus {
-  border-top: 1px solid #ebedf2;
-}
-
 
 .organization-logo {
   width: 25px;

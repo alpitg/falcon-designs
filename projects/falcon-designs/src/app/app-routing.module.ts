@@ -10,6 +10,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        redirectTo: 'dev-tools',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dev-tools',
         loadChildren: () => import('./modules/dev-tools/dev-tools.module').then(m => m.DevToolsModule)
       },
       {
