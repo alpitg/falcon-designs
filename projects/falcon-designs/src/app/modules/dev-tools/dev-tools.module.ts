@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DevToolsRoutingModule } from './dev-tools-routing.module';
 import { DevToolsComponent } from './page/dev-tools/dev-tools.component';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '@app/shared/shared.module';
 
 
 @NgModule({
