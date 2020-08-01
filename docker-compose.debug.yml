@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  falcon:
+    container_name: falcon-container
+    image: falcon
+    # build: .
+    build:
+      args:
+        buildno: 1
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:80

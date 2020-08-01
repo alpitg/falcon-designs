@@ -130,7 +130,257 @@
           }
         }
       }
-    }},
+    },
+    "travellers": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/travellers",
+      "sourceRoot": "projects/travellers/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/travellers",
+            "index": "projects/travellers/src/index.html",
+            "main": "projects/travellers/src/main.ts",
+            "polyfills": "projects/travellers/src/polyfills.ts",
+            "tsConfig": "projects/travellers/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/travellers/src/favicon.ico",
+              "projects/travellers/src/assets",
+              "projects/travellers/src/config"
+            ],
+            "styles": [
+              "projects/travellers/src/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/travellers/src/assets/styles/components",
+                "projects/travellers/src/assets/styles/pages"
+              ]
+            },
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/travellers/src/environments/environment.ts",
+                  "with": "projects/travellers/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "travellers:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "travellers:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "travellers:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/travellers/src/test.ts",
+            "polyfills": "projects/travellers/src/polyfills.ts",
+            "tsConfig": "projects/travellers/tsconfig.spec.json",
+            "karmaConfig": "projects/travellers/karma.conf.js",
+            "assets": [
+              "projects/travellers/src/favicon.ico",
+              "projects/travellers/src/assets"
+            ],
+            "styles": [
+              "projects/travellers/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/travellers/tsconfig.app.json",
+              "projects/travellers/tsconfig.spec.json",
+              "projects/travellers/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/travellers/e2e/protractor.conf.js",
+            "devServerTarget": "travellers:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "travellers:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "makemytrading": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/makemytrading",
+      "sourceRoot": "projects/makemytrading/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/makemytrading",
+            "index": "projects/makemytrading/src/index.html",
+            "main": "projects/makemytrading/src/main.ts",
+            "polyfills": "projects/makemytrading/src/polyfills.ts",
+            "tsConfig": "projects/makemytrading/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/makemytrading/src/favicon.ico",
+              "projects/makemytrading/src/assets"
+            ],
+            "styles": [
+              "projects/makemytrading/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/makemytrading/src/environments/environment.ts",
+                  "with": "projects/makemytrading/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "makemytrading:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "makemytrading:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "makemytrading:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/makemytrading/src/test.ts",
+            "polyfills": "projects/makemytrading/src/polyfills.ts",
+            "tsConfig": "projects/makemytrading/tsconfig.spec.json",
+            "karmaConfig": "projects/makemytrading/karma.conf.js",
+            "assets": [
+              "projects/makemytrading/src/favicon.ico",
+              "projects/makemytrading/src/assets"
+            ],
+            "styles": [
+              "projects/makemytrading/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/makemytrading/tsconfig.app.json",
+              "projects/makemytrading/tsconfig.spec.json",
+              "projects/makemytrading/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/makemytrading/e2e/protractor.conf.js",
+            "devServerTarget": "makemytrading:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "makemytrading:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "analytics": false
   },

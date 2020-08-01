@@ -1,0 +1,23 @@
+.f-card {
+  margin-bottom: 20px;
+  box-shadow: 0 0 13px 0 rgba(82, 63, 105, 0.05);
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.f-card-body {
+  color: #646c9a;
+  padding: 15px;
+}
+
+.f-card-header {
+  padding: 0 15px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ebedf2;
+  justify-content: space-between;
+}
+.f-card-header > h3,h4,h5,h6 {
+  margin-bottom: 0px;
+}
