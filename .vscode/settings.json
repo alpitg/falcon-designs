@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/2e09f209-9abf-435e-86a6-5f078b723128/resourceGroups/tripling-group-win/providers/Microsoft.Web/sites/makemytrading",
+    "appService.deploySubpath": "dist\\makemytrading"
+}
