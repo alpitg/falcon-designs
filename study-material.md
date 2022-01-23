@@ -11,6 +11,7 @@
   - [Angular folder structure](https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7)
   - [TechWorld with Nana](https://www.youtube.com/channel/UCdngmbVKX1Tgre699-XLlUA)
   - [Minikube and Kubectl explained | Setup for Beginners | Kubernetes Tutorial 17](https://www.youtube.com/watch?v=E2pP1MOfo3g)
+  - [Deploy Docker image to Azure Kubernetes Service AKS from dashboard](https://www.youtube.com/watch?v=VafY-qfpM8M)
   - [Create Angular App and Deploy it to Docker Hub](https://www.youtube.com/watch?v=etA5xiX5TCA&list=RDCMUCCYR9GpcE3skVnyMU8Wx1kQ&index=1)
   - [Deploy a Docker container to Kubernetes using YAML files](https://www.youtube.com/watch?v=eHvKc6hNmhI&list=RDCMUCCYR9GpcE3skVnyMU8Wx1kQ&index=2)
   - [How to build and deploy a containerized app to Azure Kubernetes Service (AKS)](https://www.youtube.com/watch?v=E9YWmbUb9Ps)
